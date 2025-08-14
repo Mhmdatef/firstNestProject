@@ -8,15 +8,5 @@ export class CreateUserDto {
   @IsString()
   @MinLength(6)
   password: string;
-  @AfterInsert()
-  logInsert() {
-    console.log('Inserted user with email:', this.email);
-  }
-  @AfterUpdate()
-  logUpdate() {
-    console.log('Updated user with email:', this.email);
-  }
-  afterRemove() {
-    console.log('Removed user with email:', this.email);
-  }
+
 }
